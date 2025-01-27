@@ -1,0 +1,54 @@
+.App {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: linear-gradient(135deg, #87CEEB, #1E90FF);
+    background-size: 200% 200%;
+    /* Aumentamos el tamaño del fondo para permitir el movimiento */
+    background-attachment: fixed;
+    color: #fff;
+    animation: moveBackground 10s ease infinite;
+    /* Aplicamos la animación */
+    position: relative;
+
+
+}
+
+/* Definición de la animación */
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+        /* Inicio de la animación */
+    }
+
+    50% {
+        background-position: 100% 100%;
+        /* Punto intermedio */
+    }
+
+    100% {
+        background-position: 0% 0%;
+        /* Vuelve al inicio */
+    }
+}
+
+.h1 {
+    color: #FFEB3B;
+    font-size: 4rem;
+    animation: shine 2s infinite alternate;
+}
+
+@keyframes shine {
+    from {
+        text-shadow: -10px -10px 20px rgba(255, 235, 59, 0.7), 0 0 20px rgba(255, 235, 59, 0.7);
+    }
+
+    to {
+        text-shadow: 10px 10px 20px rgba(255, 235, 59, 0.7), 0 0 20px rgba(255, 235, 59, 0.7);
+    }
+}

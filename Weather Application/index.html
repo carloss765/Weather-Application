@@ -1,13 +1,40 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="src/assets/Weather.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Application</title>
+</head>
+
+<body style="font-family: 'Montserrat' , sans-serif;
+font-size: 3rem;
+justify-content: center;
+height: 100%;
+width: 100%;
+align-items: center;
+margin-top: 50px;
+margin-bottom: 50px;
+background: linear-gradient(135deg, #87CEEB, #1E90FF);
+background-size: 200% 200%; /* Aumentamos el tamaño del fondo para permitir el movimiento */
+background-attachment: fixed;
+color: #fff;
+animation: moveBackground 10s ease infinite; /* Aplicamos la animación */
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%; /* Inicio de la animación */
+    }
+    50% {
+        background-position: 100% 100%; /* Punto intermedio */
+    }
+    100% {
+        background-position: 0% 0%; /* Vuelve al inicio */
+    }
+}">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

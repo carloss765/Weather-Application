@@ -1,11 +1,13 @@
 import React from 'react';
 import Weather from './Weather';
+import './App.css';
 
-const App = () =>{
+const App = () => {
 
   return (
     <div className="App">
-    <Weather />
+      <h1 className='h1'>Weather Application</h1>
+      <Weather />
     </div>
   )
 }

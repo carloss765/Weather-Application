@@ -1,0 +1,139 @@
+/* Estilos para el contenedor principal */
+.weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    background: transparent;
+    background-size: 200% 200%;
+    animation: moveBackground 10s ease infinite;
+}
+
+/* Animación del fondo */
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Estilos para el div que contiene la información del clima */
+.Div {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: float 4s ease-in-out infinite;
+    margin-bottom: 0-auto;
+}
+
+/* Animación de flotar */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Estilos para el título */
+.subTitle {
+    font-size: 2rem;
+    color: #FFEB3B;
+    /* Amarillo */
+    text-shadow: 0 0 10px rgba(255, 235, 59, 0.7);
+    position: relative;
+}
+
+/* Efecto de sol al lado del título */
+.subTitle::before {
+    content: "☀️";
+    position: absolute;
+    top: -20px;
+    left: -40px;
+    font-size: 2rem;
+    animation: shine 2s ease-in-out infinite;
+}
+
+/* Animación de destello */
+@keyframes shine {
+
+    0%,
+    100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+/* Estilos para la temperatura */
+.temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #EF6C00;
+    /* Naranja oscuro */
+    margin: 10px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la condición climática */
+.condition {
+    font-size: 1.5rem;
+    color: #546E7A;
+    /* Azul grisáceo */
+    margin: 5px 0;
+}
+
+/* Estilos para el ícono del clima */
+.weather img {
+    width: 80px;
+    height: 80px;
+    margin: 10px 0;
+}
+
+/* Estilos para el formulario */
+form {
+    margin-top: 20px;
+}
+
+form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #2196F3;
+    /* Azul */
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #1976D2;
+    /* Azul más oscuro */
+}
